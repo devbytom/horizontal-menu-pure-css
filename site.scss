@@ -10,7 +10,6 @@ body {
   font-weight: 700;
   font-size: 34px;
 }
-
 .container {
   display: grid;
   grid-template-columns: repeat(4, minmax(10px, 1fr));
@@ -27,29 +26,33 @@ body {
     place-items: center;
     padding-right: 50px;
     padding-left: 50px;
+    // transform: scale(0.5);
+    background-position: 0px 0px;
 
     &:hover {
-      --background: url("/assets/1.jpg");
+      --background: url("./assets/1.jpg");
       background-size: cover;
       background-image: var(--background);
-      transform: scale(1.1);
+      transition: 0.7s all ease;
+      // transform: scale(1.1);
+      background-position: -50px -50px;
     }
   }
 
   & .item1:hover {
-    --background: url("/assets/1.jpg");
+    --background: url("./assets/1.jpg");
   }
 
   & .item2:hover {
-    --background: url("/assets/2.jpg");
+    --background: url("./assets/2.jpg");
   }
 
   & .item3:hover {
-    --background: url("/assets/3.jpg");
+    --background: url("./assets/3.jpg");
   }
 
   & .item4:hover {
-    --background: url("/assets/4.jpg");
+    --background: url("./assets/4.jpg");
   }
 }
 
