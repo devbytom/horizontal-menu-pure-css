@@ -1,0 +1,79 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background: url("./assets/bcg.jpg");
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(10px, 1fr))[4];
+      grid-template-columns: repeat(4, minmax(10px, 1fr));
+  height: 100%;
+  width: 100%;
+}
+
+.container .item {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.container .item:hover {
+  --background: url("/assets/1.jpg");
+  background-size: cover;
+  background-image: var(--background);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container .item1:hover {
+  --background: url("/assets/1.jpg");
+}
+
+.container .item2:hover {
+  --background: url("/assets/2.jpg");
+}
+
+.container .item3:hover {
+  --background: url("/assets/3.jpg");
+}
+
+.container .item4:hover {
+  --background: url("/assets/4.jpg");
+}
+
+.button {
+  color: black;
+  background-color: #fff;
+  width: 200px;
+  height: 40px;
+  font-family: "Roboto", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 5px;
+  font-weight: 700;
+  font-size: 34px;
+}
+
+.text {
+  padding-bottom: 20px;
+  color: #fff;
+}
+/*# sourceMappingURL=site.css.map */
