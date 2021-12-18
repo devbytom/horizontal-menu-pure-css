@@ -33,9 +33,9 @@ body {
       --background: url("./assets/1.jpg");
       background-size: cover;
       background-image: var(--background);
-      transition: 0.7s all ease;
-      // transform: scale(1.1);
-      background-position: -50px -50px;
+      transition: 0.7s all ease-in-out;
+      transform: scale(1.1);
+      // background-position: -50px 0px;
     }
   }
 

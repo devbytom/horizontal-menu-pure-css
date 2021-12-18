@@ -39,9 +39,10 @@ body {
   --background: url("./assets/1.jpg");
   background-size: cover;
   background-image: var(--background);
-  -webkit-transition: 0.7s all ease;
-  transition: 0.7s all ease;
-  background-position: -50px -50px;
+  -webkit-transition: 0.7s all ease-in-out;
+  transition: 0.7s all ease-in-out;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .container .item1:hover {
