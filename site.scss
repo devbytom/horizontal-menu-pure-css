@@ -37,6 +37,30 @@ body {
       transform: scale(1.1);
       // background-position: -50px 0px;
     }
+
+    &:hover .button {
+      // color: #fff;
+      // background-color: black;
+      // box-shadow: 0 0 0 2px red;
+    }
+
+    & .button {
+      color: black;
+      background-color: #fff;
+      width: 200px;
+      height: 40px;
+      font-family: "Roboto", sans-serif;
+      display: grid;
+      place-items: center;
+      padding: 5px;
+      font-weight: 700;
+      font-size: 34px;
+    }
+
+    & .text {
+      padding-bottom: 20px;
+      color: #fff;
+    }
   }
 
   & .item1:hover {
@@ -54,22 +78,4 @@ body {
   & .item4:hover {
     --background: url("./assets/4.jpg");
   }
-}
-
-.button {
-  color: black;
-  background-color: #fff;
-  width: 200px;
-  height: 40px;
-  font-family: "Roboto", sans-serif;
-  display: grid;
-  place-items: center;
-  padding: 5px;
-  font-weight: 700;
-  font-size: 34px;
-}
-
-.text {
-  padding-bottom: 20px;
-  color: #fff;
 }

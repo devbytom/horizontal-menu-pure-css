@@ -45,6 +45,25 @@ body {
           transform: scale(1.1);
 }
 
+.container .item .button {
+  color: black;
+  background-color: #fff;
+  width: 200px;
+  height: 40px;
+  font-family: "Roboto", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 5px;
+  font-weight: 700;
+  font-size: 34px;
+}
+
+.container .item .text {
+  padding-bottom: 20px;
+  color: #fff;
+}
+
 .container .item1:hover {
   --background: url("./assets/1.jpg");
 }
@@ -59,24 +78,5 @@ body {
 
 .container .item4:hover {
   --background: url("./assets/4.jpg");
-}
-
-.button {
-  color: black;
-  background-color: #fff;
-  width: 200px;
-  height: 40px;
-  font-family: "Roboto", sans-serif;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  padding: 5px;
-  font-weight: 700;
-  font-size: 34px;
-}
-
-.text {
-  padding-bottom: 20px;
-  color: #fff;
 }
 /*# sourceMappingURL=site.css.map */
