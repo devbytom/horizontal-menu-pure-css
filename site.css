@@ -11,10 +11,13 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
-  background: url("./assets/bcg.jpg");
+  background: url("./assets/bcg.jpg"), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 255, 242, 0.7)));
+  background: url("./assets/bcg.jpg"), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 255, 242, 0.7));
+  background-blend-mode: overlay;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 34px;
+  z-index: -2;
 }
 
 .container {
@@ -24,28 +27,26 @@ body {
       grid-template-columns: repeat(4, minmax(10px, 1fr));
   height: 100%;
   width: 100%;
+  -webkit-transform: translateZ(0, 0, 1px);
+  transform: translateZ(0, 0, 1px);
+  -webkit-backface-visibility: hidden;
 }
 
-.container .item {
+.container .feature {
   display: -ms-grid;
   display: grid;
+  position: relative;
+  height: 100vh;
   place-items: center;
-  padding-right: 50px;
-  padding-left: 50px;
-  background-position: 0px 0px;
+  overflow: hidden;
 }
 
-.container .item:hover {
-  --background: url("./assets/1.jpg");
-  background-size: cover;
-  background-image: var(--background);
-  -webkit-transition: 0.7s all ease-in-out;
-  transition: 0.7s all ease-in-out;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.container .feature .content {
+  width: 70%;
+  margin: 0 auto;
 }
 
-.container .item .button {
+.container .feature .content .button {
   color: black;
   background-color: #fff;
   width: 200px;
@@ -57,26 +58,36 @@ body {
   padding: 5px;
   font-weight: 700;
   font-size: 34px;
+  opacity: 0;
 }
 
-.container .item .text {
+.container .feature .content .text {
   padding-bottom: 20px;
   color: #fff;
 }
 
-.container .item1:hover {
-  --background: url("./assets/1.jpg");
+.container .feature .feature-img {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: opacity 0.5s, -webkit-transform 2s;
+  transition: opacity 0.5s, -webkit-transform 2s;
+  transition: transform 2s, opacity 0.5s;
+  transition: transform 2s, opacity 0.5s, -webkit-transform 2s;
+  height: 100vh;
 }
 
-.container .item2:hover {
-  --background: url("./assets/2.jpg");
+.container .feature:hover .feature-img {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
-.container .item3:hover {
-  --background: url("./assets/3.jpg");
-}
-
-.container .item4:hover {
-  --background: url("./assets/4.jpg");
+.container .feature:hover .button {
+  opacity: 1;
 }
 /*# sourceMappingURL=site.css.map */
